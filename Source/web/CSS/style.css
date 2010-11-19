@@ -1,0 +1,34 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* reset CSS */
+
+*{
+	margin:0px;
+	padding:0px;
+	vertical-align:baseline;
+	background:transparent;
+	font-size:12px;
+}
+
+/* CSS cho body */
+body{
+	background: url("../images/bg_nokiaN8.jpg") repeat-x scroll left top #ABC8F2;
+}
+
+/* CSS cho phan wrapper */
+#wrapper{
+    margin:10px auto;
+    width: 989px;
+    background-color: white;
+    -moz-box-shadow: 5px 5px 8px #7A7A7A;
+    -webkit-box-shadow: 5px 5px 8px #7A7A7A; /* for webkit */
+    box-shadow: 5px 5px 8px #7A7A7A;
+}
+#content{
+    height: 750px;
+}
+
+#header_helper_container{
+    text-align: center;
+}
