@@ -1,0 +1,27 @@
+/* 
+    Document   : footerStyle
+    Created on : Nov 19, 2010, 9:32:54 AM
+    Author     : tannguyen
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+#tbl{
+    margin-left: 10px;
+    margin-left: 10px;
+}
+
+ul li{
+    list-style: none;
+}
+.info{
+    padding-left: 30px;
+}
