@@ -1,0 +1,110 @@
+/* 
+    Document   : headerStyle
+    Created on : Nov 20, 2010, 9:50:47 AM
+    Author     : tannguyen
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+
+#header{
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+#navigation{
+    padding-left: 10px;
+    padding-top: 5px;
+    height: 26px;
+    background: url("../images/top_menu_bg.jpg") repeat-x #797979;
+    vertical-align: bottom;
+    text-decoration: none;
+}
+
+#navigation li span{
+    border-right: 1px solid #FFFFFF;
+    height: 17px;
+    padding: 4px 16px 0px;
+}
+
+#navigation ul li{
+    list-style: none;    
+    display: inline;
+}
+
+#navigation ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+#navigation ul li a:hover{
+    text-decoration: none;
+    color: blue;
+}
+
+#top_tools_container{
+    color: white;
+    background: #797979;
+    padding: 8px 5px 8px 25px;
+    /*height: 35px;*/
+    font-size: 0.8em;
+    font-weight: normal;
+    vertical-align: middle;
+    overflow: hidden;    
+}
+
+#btnSearch {
+    vertical-align: middle;
+}
+
+#key{
+    width:18em;
+}
+
+#search{
+    text-decoration: none;
+    color: white;
+    float: left;
+    width: 700px;
+}
+
+#search a{
+    text-decoration: none;
+    color: white;
+}
+#search a:hover{
+    text-decoration: none;
+    color: darkblue;
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+#sign_io{
+    text-decoration: none;
+    float: right;
+}
+
+
+#sign_io a{
+    text-decoration: none;
+    color: brown;
+}
+
+#sign_io a:hover{
+    text-decoration: none;
+    color: darkblue;
+    font-style: italic;
+    font-weight: bold;
+}
+#content_tools img{
+    vertical-align: middle;
+}

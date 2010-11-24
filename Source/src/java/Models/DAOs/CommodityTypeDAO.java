@@ -30,7 +30,7 @@ public class CommodityTypeDAO {
                 CommodityTypePOJO ct = new CommodityTypePOJO();
                 ct.setCommodityTypeId(rs.getInt("commodityTypeId"));
                 ct.setCommodityTypeName(rs.getString("commodityTypeName"));
-                ct.setDescription(rs.getString(rs.getString("description")));
+                ct.setDescription(rs.getString("description"));
                 result.add(ct);
             }
             connect.close();
