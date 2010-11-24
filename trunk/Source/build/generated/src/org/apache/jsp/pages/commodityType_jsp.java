@@ -54,34 +54,36 @@ public final class commodityType_jsp extends org.apache.jasper.runtime.HttpJspBa
       out.write("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n");
       out.write("    \"http://www.w3.org/TR/html4/loose.dtd\">\n");
       out.write("\n");
+      out.write("\n");
 
             Object obj = request.getAttribute("commodityType");
             if (obj == null) {
+                String url = "/GetCommodityTypeAllController";
                 request.setAttribute("actionMode", ActionMode.Get);
-                String url = "/GetCommodityTypeAll";
                 RequestDispatcher rd = this.getServletContext().getRequestDispatcher(url);
                 rd.forward(request, response);
             }
 
       out.write("\n");
-      out.write("<ul>\n");
-      out.write("    ");
+      out.write("<div id=\"catalogue\">\n");
+      out.write("    <ul>\n");
+      out.write("        <li><a href=\"index.jsp\">Trang chủ</a></li>\n");
+      out.write("        ");
 
-                obj = request.getAttribute("commodityType");
-                ArrayList<CommodityTypePOJO> list = new ArrayList<CommodityTypePOJO>();
-                for (CommodityTypePOJO ct : list) {
-    
+                    ArrayList<CommodityTypePOJO> list = (ArrayList<CommodityTypePOJO>) obj;
+                    for (CommodityTypePOJO ct : list) {
+        
       out.write("\n");
-      out.write("    <li>\n");
-      out.write("        <a href=\"#\">");
-      out.print(ct);
-      out.write("</a>\n");
-      out.write("    </li>\n");
-      out.write("    ");
-            }
-    
+      out.write("        <li> <a href=\"#\">");
+      out.print( ct);
+      out.write("</a></li>\n");
+      out.write("        ");
+
+                    }
+        
       out.write("\n");
-      out.write("</ul>");
+      out.write("    </ul>\n");
+      out.write("</div>");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;

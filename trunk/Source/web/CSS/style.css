@@ -4,16 +4,19 @@
 /* reset CSS */
 
 *{
-	margin:0px;
-	padding:0px;
-	vertical-align:baseline;
-	background:transparent;
-	font-size:12px;
+    margin:0px;
+    padding:0px;
+    vertical-align:baseline;
+}
+
+img{
+    border: none;
+    vertical-align: top;
 }
 
 /* CSS cho body */
 body{
-	background: url("../images/bg_nokiaN8.jpg") repeat-x scroll left top #ABC8F2;
+    background: url("../images/bg_nokiaN8.jpg") repeat-x scroll left top #ABC8F2;
 }
 
 /* CSS cho phan wrapper */
@@ -21,14 +24,86 @@ body{
     margin:10px auto;
     width: 989px;
     background-color: white;
-    -moz-box-shadow: 5px 5px 8px #7A7A7A;
+    -moz-box-shadow: 5px 5px 8px cornflowerblue;
     -webkit-box-shadow: 5px 5px 8px #7A7A7A; /* for webkit */
     box-shadow: 5px 5px 8px #7A7A7A;
+
 }
 #content{
+    position: relative;
     height: 750px;
+    clear: both;    
+    overflow: hidden;
 }
 
 #header_helper_container{
     text-align: center;
+}
+
+.sub_title{
+    background: url("../images/sb_title_left.png");
+    color: #333333;
+    font: bold 12px;
+    padding: 9px 10px 8px 12px;
+}
+
+
+div#mainNav {
+    float:left;
+    width: 200px;    
+}
+
+#mainNav img{
+    width: 200px;
+}
+
+div#mainNav h1 {
+    font-size: 14px;
+    background: #3883cc;
+    color: white;
+    text-align: center;
+    -moz-border-radius: 5px 5px 0px 0px;
+}
+
+div#mainNav ul {
+    list-style: none;
+    border: 1px solid #bccbd8;
+}
+
+div#mainNav ul li {
+    position: relative;
+    border-bottom: 1px solid #bccbd8;
+}
+
+div#mainNav ul li a {
+    color: #1e5b7e;
+    text-decoration: none;
+    padding: 5px;
+}
+
+div#mainNav ul li a:hover {
+    text-decoration: underline;
+}
+
+div#mainNav ul li ul {
+    position: absolute;
+    top: -1px;
+    left: 198px;
+    display: none;
+}
+
+div#mainNav ul li:hover ul {
+    display: block;
+    width: 100%;
+}
+
+#mainContent{
+    width: 789px;
+    height:100%;
+    float:left;
+    overflow: scroll;
+}
+
+#content_header img{
+    vertical-align: middle;
 }

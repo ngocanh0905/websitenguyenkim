@@ -23,6 +23,12 @@ public class CommodityTypePOJO {
         this.description = description;
     }
 
+    @Override
+    public String toString(){
+        return commodityTypeName;
+    }
+
+
     public Integer getCommodityTypeId() {
         return commodityTypeId;
     }
