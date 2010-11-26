@@ -8,6 +8,9 @@
     padding:0px;
     vertical-align:baseline;
 }
+a{
+    text-decoration: none;
+}
 
 img{
     border: none;
@@ -87,6 +90,7 @@ div#mainNav ul li a:hover {
 
 div#mainNav ul li ul {
     position: absolute;
+    background: white;
     top: -1px;
     left: 198px;
     display: none;
@@ -101,9 +105,28 @@ div#mainNav ul li:hover ul {
     width: 789px;
     height:100%;
     float:left;
+    color: black;
     overflow: scroll;
+    text-align: left;
+    font-size: 1.1em;
 }
+
+#mainContent .care{
+    font-size: 1.2em;
+    text-align: left;
+}
+
 
 #content_header img{
     vertical-align: middle;
+}
+
+.field{
+    padding-left: 150px;
+    width: 220px;
+}
+
+#message{
+    padding-left: 20px;
+    color: red;
 }

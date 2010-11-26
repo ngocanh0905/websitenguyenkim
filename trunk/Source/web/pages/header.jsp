@@ -3,6 +3,12 @@
     Created on : Nov 20, 2010, 10:51:37 AM
     Author     : tannguyen
 --%>
+<%@page import="Models.POJOs.UserPOJO"%>
+<%@page import="java.lang.String"%>
+<%@page import="Models.POJOs.OrderDetailPOJO"%>
+<%@page import="Models.POJOs.CommodityPOJO"%>
+<%@page import="Models.POJOs.CommodityTypePOJO"%>
+<%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <div id="header_helper_container"> <!-- Chứa logo, banner, navigation-->
@@ -44,10 +50,20 @@
         <form action="" method="Get">
             Từ khóa
             <select name="commodityType">
-                <option>Máy ép trái cây</option>
-                <option>TV LCD</option>
-                <option>Máy hút bụi</option>
-                <option>Bàn ủi</option>
+
+                <option value="0">[Tất cả]</option>
+                <%
+                            Object obj = request.getAttribute("commodityType");
+                            ArrayList<CommodityTypePOJO> list = (ArrayList<CommodityTypePOJO>) obj;
+                            for (CommodityTypePOJO ct : list) {
+                %>
+
+                <option value =<%=ct.getCommodityTypeId()%>><%=ct%></option>
+                <%
+                            }
+
+                %>
+
             </select>
             <input type ="text" name="txtKeyword" id="key"/>
             <input type="image" src="images/tim.gif" alt="Submit" id="btnSearch" />
@@ -56,14 +72,16 @@
     </div>
     <div id="sign_io">
         <%
-                    Object isLogin = session.getAttribute("isLogin");
-                    if (isLogin == null) {
+                    String s = String.valueOf(session.getAttribute("isLogin"));
+                    boolean isLogin = Boolean.parseBoolean(s);
+
+                    if (!isLogin) {
         %>
-        <a href ="pages/login.jsp?ac=in">Đăng nhập</a> hoặc <a href="pages/register.jsp">Đăng ký</a>
+        <a href ="login.jsp?ac=in">Đăng nhập</a> hoặc <a href="register.jsp">Đăng ký</a>
 
         <%                    } else {
-                        String username = String.valueOf(session.getAttribute("username"));
-                        out.print(username + "[<a href ='pages/login.jsp?ac=out'>Thoát</a>]");
+                        UserPOJO user = (UserPOJO)session.getAttribute("user");
+                        out.print(user.getFullname() + "[<a href ='GetUserByUserPass?ac=out'>Thoát</a>]");
                     }
 
         %>
@@ -77,8 +95,24 @@
             <td width ="60%">
         <marquee behavior="alternate"> <h2> 0842132-0842109 -- Đồ án Chuyên đề Java </h2> </marquee>
         </td>
-        <td>
-            <img src="images/cart.gif"/>
+        <td align ="right">
+            <a href="cart.jsp"><img src="images/cart.gif"/></a>
+                <%
+                            float sm = 0;
+                            int amount = 0;
+                            Object objCart = session.getAttribute("cart");
+                            if (objCart != null) {
+                                ArrayList<OrderDetailPOJO> cart = (ArrayList<OrderDetailPOJO>) objCart;
+
+                                for (OrderDetailPOJO item : cart) {
+                                    sm += item.getPrice();
+                                    amount += item.getAmount();
+                                }
+                            }
+                %>
+            Có &nbsp; <%=amount%> sản phẩm, tổng giá trị: <%=sm%>&nbsp;&nbsp;|&nbsp;&nbsp
+            <a href="checkout.jsp">Thanh toán >></a>
+
         </td>
         </tr>
     </table>

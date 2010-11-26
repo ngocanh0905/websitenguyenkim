@@ -16,9 +16,7 @@ root {
 }
 
 #header{
-    text-decoration: none;
-    font-size: 1.1em;
-    font-weight: bold;
+    text-decoration: none;  
 }
 #navigation{
     padding-left: 10px;
@@ -55,7 +53,7 @@ root {
     background: #797979;
     padding: 8px 5px 8px 25px;
     /*height: 35px;*/
-    font-size: 0.8em;
+    
     font-weight: normal;
     vertical-align: middle;
     overflow: hidden;    

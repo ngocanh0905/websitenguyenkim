@@ -75,7 +75,7 @@
 
 
 <map name="Map">
-    <area shape="rect" coords="201,7,293,31" href="customerCare.html" target="_blank" alt="customer care">
+    <area shape="rect" coords="201,7,293,31" href="customerCare.jsp" target="_blank" alt="customer care">
     <area shape="rect" coords="306,6,387,33" href="warranty.html" target="_blank" alt="product care">
     <area shape="rect" coords="403,6,490,31" href="#" target="_blank">
     <area shape="rect" coords="506,9,590,35" href="#">

@@ -42,5 +42,85 @@ public class CommodityPOJO {
         return commodityName;
     }
 
+    public int getAmountExisting() {
+        return amountExisting;
+    }
+
+    public void setAmountExisting(int amountExisting) {
+        this.amountExisting = amountExisting;
+    }
+
+    public Integer getCommodityId() {
+        return commodityId;
+    }
+
+    public void setCommodityId(Integer commodityId) {
+        this.commodityId = commodityId;
+    }
+
+    public String getCommodityName() {
+        return commodityName;
+    }
+
+    public void setCommodityName(String commodityName) {
+        this.commodityName = commodityName;
+    }
+
+    public CommodityTypePOJO getCommoditytype() {
+        return commoditytype;
+    }
+
+    public void setCommoditytype(CommodityTypePOJO commoditytype) {
+        this.commoditytype = commoditytype;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getFeature() {
+        return feature;
+    }
+
+    public void setFeature(String feature) {
+        this.feature = feature;
+    }
+
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
+    }
+
+    public ManufacturerPOJO getManufacturer() {
+        return manufacturer;
+    }
+
+    public void setManufacturer(ManufacturerPOJO manufacturer) {
+        this.manufacturer = manufacturer;
+    }
+
+    public float getUnitPrice() {
+        return unitPrice;
+    }
+
+    public void setUnitPrice(float unitPrice) {
+        this.unitPrice = unitPrice;
+    }
+
+    public int getWarranty() {
+        return warranty;
+    }
+
+    public void setWarranty(int warranty) {
+        this.warranty = warranty;
+    }
+
     
 }

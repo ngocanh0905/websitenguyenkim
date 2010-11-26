@@ -5,7 +5,9 @@
 
 package Models.POJOs;
 
-import java.util.Date;
+import java.sql.Date;
+
+
 
 /**
  *
