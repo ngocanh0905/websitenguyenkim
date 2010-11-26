@@ -33,6 +33,7 @@ public class CommodityTypeDAO {
                 ct.setDescription(rs.getString("description"));
                 result.add(ct);
             }
+            statement.close();
             connect.close();
         }catch(Exception ex){
             throw ex;

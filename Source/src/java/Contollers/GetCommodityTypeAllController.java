@@ -44,8 +44,38 @@ public class GetCommodityTypeAllController extends HttpServlet {
             if (mode == ActionMode.Get) {
                 ArrayList<CommodityTypePOJO> list = CommodityTypeDAO.getCommodityTypeAll();
                 request.setAttribute("commodityType", list);
-                request.removeAttribute("actionMode"); 
+                request.removeAttribute("actionMode");
                 String url = "/index.jsp";
+                String source = String.valueOf(request.getAttribute("source"));
+                if (source.equals("customer")) {
+                    url = "/customerCare.jsp";
+                }
+                if(source.equals("login")){
+                    url = "/login.jsp";
+                }
+                if(source.equals("register")){
+                    url = "/register.jsp";
+                }
+                if(source.equals("login")){
+                    url = "/login.jsp";
+                }
+                if(source.equals("view")){
+                    url = "/viewProduct.jsp";
+                }
+                if(source.equals("viewDetail")){
+                    url = "/viewProductDetail.jsp";
+                }
+                if(source.equals("cartDetail")){
+                    url = "/cartDetail.jsp";
+                }
+                if(source.equals("checkout")){
+                    url = "/checkout.jsp";
+                }
+                if(source.equals("search")){
+                    url = "/search.jsp";
+                }
+
+
                 RequestDispatcher rd = this.getServletContext().getRequestDispatcher(url);
                 rd.forward(request, response);
             }

@@ -34,9 +34,33 @@ public class ManufacturerDAO {
                 result.add(m);
             }
             connect.close();
+            statement.close();
         }catch(Exception ex){
             throw ex;
         }
         return result;
+    }
+
+    public static ManufacturerPOJO getManufacturerById(int id) throws Exception{
+        ManufacturerPOJO m = null;
+        Connection connect = null;
+        try{
+            connect = MySqlDataAccessHelper.getConnection();
+            CallableStatement statement = connect.prepareCall("{Call sp_getManufacturerById(?)}");
+            statement.setInt(1, id);
+            ResultSet rs = statement.executeQuery();
+
+            if(rs.next()){
+                m = new ManufacturerPOJO();
+                m.setManufacturerId(rs.getInt("manufacturerId"));
+                m.setManufacturerName(rs.getString("manufacturerName"));
+                m.setCountry(rs.getString("country"));                
+            }
+            connect.close();
+            statement.close();
+        }catch(Exception ex){
+            throw ex;
+        }
+        return m;
     }
 }

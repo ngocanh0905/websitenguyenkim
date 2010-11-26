@@ -1,5 +1,5 @@
 <%--
-    Document   : customerCare
+    Document   : index
     Created on : Nov 18, 2010, 10:10:16 AM
     Author     : tannguyen
 --%>
@@ -17,16 +17,16 @@
             Object obj = request.getAttribute("commodityType");
             if (obj == null) {
                 String url = "/GetCommodityTypeAllController";
-                request.setAttribute("source", "customer");
                 request.setAttribute("actionMode", ActionMode.Get);
+                request.setAttribute("source", "customer");
                 RequestDispatcher rd = this.getServletContext().getRequestDispatcher(url);
                 rd.forward(request, response);
             }
             Object obj1 = request.getAttribute("manufacturer");
             if (obj1 == null) {
                 String url = "/GetManufacturerAllController";
-                request.setAttribute("source", "customer");
                 request.setAttribute("actionMode", ActionMode.Get);
+                request.setAttribute("source", "customer");
                 RequestDispatcher rd = this.getServletContext().getRequestDispatcher(url);
                 rd.forward(request, response);
             }
@@ -90,41 +90,35 @@
 
                 <div id="mainContent"><!-- đặt code trong tag này -->
                     <!-- Code trong phần này -->
-
-
-                    THÔNG TIN CHĂM SÓC KHÁCH HÀNG TẠI NGUYỄN KIM
-
-                    Quý khách hàng cần thông tin về các vấn đề mua hàng trên mạng, thông tin sản phẩm, hình ảnh yêu cầu báo giá vui lòng liên hệ bộ phận:
-
-                    Chăm Sóc Khách hàng - Trung tâm Thương Mại Điện Tử
-
-                    cham soc khach hang nguyen kim(848) 38 211 211 Bấm số nội bộ : 3005 - 3006
-
-                    .......................................................................................................................................
-
-                    Khách hàng mua hàng trực tiếp tại trung tâm Mua Sắm Sài Gòn Nguyễn Kim Q1 vui lòng liên hệ bộ phận:
-
-                    Chăm sóc khách hàng - Trung tâm Mua Sắm Sài Gòn Nguyễn Kim Quận 1
-
-                    cham soc khach hang nguyen kim(848) 38 211 211 Bấm số nội bộ 1120-1172-1173
-
-                    ............................................................................................................................................
-
-                    Khách hàng mua hàng trực tiếp tại trung tâm Mua Sắm Nguyễn Kim Tân Bình vui lòng liên hệ bộ phận:
-
-                    Chăm sóc khách hàng - Trung Tâm Mua Sắm Nguyễn Kim- Tân Bình
-
-                    cham soc khach hang nguyen kim(848) 38 669 999 Bấm số nội bộ 1853- 1854- 1855
-
-                    ............................................................................................................................................
-
-                    Khách hàng mua hàng trực tiếp tại trung tâm Mua Sắm Nguyễn Kim Tràng Thi vui lòng liên hệ bộ phận:
-
-                    Chăm sóc khách hàng - Trung tâm Mua Sắm Nguyễn Kim Tràng Thi Hà Nội
-
-                    cham soc khach hang nguyen kim(844) 39 287 777 Bấm số nội bộ 2033-2032
-
-
+                    <table class ="care" border ="0px" width="100%">
+                        <tr>
+                            <td class ="care">
+                                <center><h2>Thông tin chăm sóc khách hàng</h2></center>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class ="care">
+                                <h5>Vui lòng liên hệ:</h5>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class ="care">
+                                <h3>&nbsp;&nbsp;&nbsp;&nbsp;Nguyễn Bảo Tấn:</h3>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class ="care">
+                                &nbsp;&nbsp;&nbsp;&nbsp;Cellphone: 0989746996
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class ="care">
+                                &nbsp;&nbsp;&nbsp;&nbsp;Email : mr.tannguyen@live.com
+                            </td>
+                        </tr>
+                    </table>
+                    
+                    
                     <!-- Phần kết thúc code -->
                 </div>
 

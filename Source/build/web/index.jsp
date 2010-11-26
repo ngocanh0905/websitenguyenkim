@@ -65,12 +65,12 @@
                                     ArrayList<ManufacturerPOJO> mList = (ArrayList<ManufacturerPOJO>) obj1;
                                     for (CommodityTypePOJO ct : list) {
                         %>
-                        <li> <span><a href="#"><%=ct%></a></span>
+                        <li> <span><a href="viewProduct.jsp?ctId=<%= ct.getCommodityTypeId() %>"><%=ct%></a></span>
                             <ul>
                                 <%
                                                                         for (ManufacturerPOJO m : mList) {
                                 %>
-                                <li> <span><a href="#"><%=m%></a></span></li>
+                                <li> <span><a href="viewProduct.jsp?ctId=<%= ct.getCommodityTypeId() %> &mId=<%= m.getManufacturerId() %>"><%=m%></a></span></li>
                                 <%
                                                                         }
 
